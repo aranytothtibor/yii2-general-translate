@@ -22,5 +22,13 @@
     },
     "extra": {
         "bootstrap": "aranytoth\\Yii2GeneralTranslate\\Bootstrap"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "php yii migrate --migrationPath=@aranytoth/Yii2GeneralTranslate/migration"
+        ],
+        "post-install-cmd": [
+            "php yii migrate --migrationPath=@aranytoth/Yii2GeneralTranslate/migration"
+        ]
     }
 }

@@ -20,8 +20,8 @@ class Bootstrap implements BootstrapInterface{
     
     public function bootstrap($app)
     {
-        $app->getUrlManager()->addRules([
-            'aranytoth/translate' => 'site/test'
-    ], false);
+        $app->setModule('translate', 'aranytoth\Yii2GeneralTranslate\Module');
+        $app->set('TranslateComponent','aranytoth\Yii2GeneralTranslate\components\TranslateComponent');
+        
     }
 }
