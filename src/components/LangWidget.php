@@ -11,8 +11,8 @@ namespace aranytoth\Yii2GeneralTranslate\components;
 use Yii;
 use yii\base\Widget;
 use yii\helpers\Html;
-use common\models\Language;
-use common\models\TranslateSource;
+use aranytoth\Yii2GeneralTranslate\models\Language;
+use aranytoth\Yii2GeneralTranslate\models\TranslateSource;
 
 
 
@@ -41,6 +41,10 @@ class LangWidget extends Widget{
             $source = TranslateSource::getSource($this->model);
             
             if (empty($source)) {
+                
+                if (!isset($params['id'])) {
+                    return false;
+                }
                 
                 $source = $params['id'];
             }

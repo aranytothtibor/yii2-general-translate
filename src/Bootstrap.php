@@ -8,6 +8,7 @@
 
 namespace aranytoth\Yii2GeneralTranslate;
 
+use Yii;
 use yii\base\BootstrapInterface;
 use yii\base\Application;
 
@@ -19,8 +20,11 @@ use yii\base\Application;
 class Bootstrap implements BootstrapInterface{
     
     public function bootstrap($app)
-    {
-        $app->setModule('translate', 'aranytoth\Yii2GeneralTranslate\Module');
+    {   
+        if (!$app->hasModule('translate') && basename(Yii::getAlias('@app')) !== 'frontend') {
+            $app->setModule('translate', 'aranytoth\Yii2GeneralTranslate\Module');
+        }
+        
         $app->set('TranslateComponent','aranytoth\Yii2GeneralTranslate\components\TranslateComponent');
         
     }

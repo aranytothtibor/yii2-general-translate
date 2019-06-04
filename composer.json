@@ -10,7 +10,7 @@
             "email": "aranytoth.tibor@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "*"
@@ -25,10 +25,10 @@
     },
     "scripts": {
         "post-update-cmd": [
-            "php yii migrate --migrationPath=@aranytoth/Yii2GeneralTranslate/migration"
+            "php yii migrate --migrationPath=@aranytoth/Yii2GeneralTranslate/migrations"
         ],
         "post-install-cmd": [
-            "php yii migrate --migrationPath=@aranytoth/Yii2GeneralTranslate/migration"
+            "php yii migrate --migrationPath=@aranytoth/Yii2GeneralTranslate/migrations"
         ]
     }
 }

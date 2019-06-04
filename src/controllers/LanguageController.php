@@ -3,8 +3,8 @@
 namespace aranytoth\Yii2GeneralTranslate\controllers;
 
 use Yii;
-use common\models\Language;
-use common\models\LanguageSearch;
+use aranytoth\Yii2GeneralTranslate\models\Language;
+use aranytoth\Yii2GeneralTranslate\models\LanguageSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
