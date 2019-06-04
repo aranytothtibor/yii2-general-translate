@@ -22,18 +22,6 @@ class TranslateComponent extends \yii\base\Component{
     public function createTranslateRecord($model, $params)
     {
         
-        if(isset($params['lang'])){
-            $record = TranslateSource::find()->where(['source' => $params['id'], 'table_name' => get_class($model), 'lang_id' => $params['lang']])->one();
-            if (empty($record) && $params['lang'] !== Language::$defaultLang) {
-                $trans = new TranslateSource();
-                $trans->lang_id = $params['lang'];
-                $trans->source = $params['id'];
-                $trans->row_id = $model[$model->tableSchema->primaryKey[0]];
-                $trans->table_name = get_class($model);
-                $trans->save();
-                
-            }
-        }
     }
     
 }

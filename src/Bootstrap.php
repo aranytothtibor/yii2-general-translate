@@ -20,12 +20,15 @@ use yii\base\Application;
 class Bootstrap implements BootstrapInterface{
     
     public function bootstrap($app)
-    {   
+    {
         if (!$app->hasModule('translate') && basename(Yii::getAlias('@app')) !== 'frontend') {
-            $app->setModule('translate', 'aranytoth\Yii2GeneralTranslate\Module');
+            if (isset(Yii::$app->params['createLangModule']) && Yii::$app->params['createLangModule'] == true || !isset(Yii::$app->params['createLangModule'])) {
+                $app->setModule('translate', 'aranytoth\Yii2GeneralTranslate\Module');
+            }
+            
         }
         
-        $app->set('TranslateComponent','aranytoth\Yii2GeneralTranslate\components\TranslateComponent');
+        //$app->set('TranslateComponent','aranytoth\Yii2GeneralTranslate\components\TranslateComponent');
         
     }
 }

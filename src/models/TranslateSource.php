@@ -61,33 +61,4 @@ class TranslateSource extends \yii\db\ActiveRecord
         return (!empty($row) ? $row->source : $model->id);
         
     }
-    
-    /*public static function find() {
-        $query = parent::find();
-        if (get_class() !== 'aranytoth\Yii2GeneralTranslate\models\TranslateSource') {
-            $query->leftJoin('translate_source', 'translate_source.row_id = category.id');
-            $query->andWhere(['translate_source.source' => null]);
-        }
-        
-        return $query;
-    }*/
-    
-    public function afterSave($insert, $changedAttributes) {
-        
-        
-        TranslateComponent::createTranslateRecord($this, Yii::$app->request->get());
-        
-        parent::afterSave($insert, $changedAttributes);
-    }
-    
-    public function getTranslate()
-    {
-        return $this->hasOne(\common\models\TranslateSource::className(), ['source' => $this->tableSchema->primaryKey[0]]);
-    }
-    
-    public function getTranslateRow()
-    {
-        return $this->hasOne(\common\models\TranslateSource::className(), ['row_id' => $this->tableSchema->primaryKey[0]]);
-    }
-    
 }
