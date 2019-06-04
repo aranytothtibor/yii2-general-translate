@@ -1,0 +1,26 @@
+{
+    "name": "aranytoth/yii2-general-translate",
+    "description": "Later...",
+    "keywords": ["yii", "translate"],
+    "type": "yii2-extension",
+    
+    "authors": [
+        {
+            "name": "aranytoth",
+            "email": "aranytoth.tibor@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "aranytoth\\Yii2GeneralTranslate\\": "src/"
+        }
+    },
+    "extra": {
+        "bootstrap": "aranytoth\\Yii2GeneralTranslate\\Bootstrap"
+    }
+}
