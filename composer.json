@@ -1,9 +1,9 @@
 {
     "name": "aranytoth/yii2-general-translate",
-    "description": "Later...",
+    "description": "This is an experiment project to translate contents without modify its tables. It connects localized rows by relation table",
     "keywords": ["yii", "translate"],
     "type": "yii2-extension",
-    
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "aranytoth",
