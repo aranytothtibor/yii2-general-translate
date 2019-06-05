@@ -1,8 +1,5 @@
 # Yii2 general multilanguage component
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Total Downloads][ico-downloads]][link-downloads]
 
 **This is an experimental project far from done**
 
